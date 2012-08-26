@@ -160,7 +160,7 @@
   <GetEpisodeDetails dest="3">
     <RegExp input="$$4" output="&lt;details&gt;\1&lt;/details&gt;" dest="3">
       <RegExp input="$$1" output="\2" dest="5">
-        <expression noclean="2">:[0-9]+x($$2|0$$2) -(.*?&lt;/div&gt;.*?&lt;/div&gt;)</expression>
+        <expression noclean="2">[0-9]+x($$2|0$$2|\?\?) -(.*?&lt;/div&gt;.*?&lt;/div&gt;)</expression>
       </RegExp>
       <RegExp input="$$5" output="&lt;title&gt;\1&lt;/title&gt;" dest="4+">
         <expression trim="1">^([^&lt;]+)</expression>
